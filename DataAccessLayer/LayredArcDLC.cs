@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Interfaces;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,18 @@ namespace DataAccessLayer
 {
    public class LayredArcDLC : ILayredArcDemoDLC
     {
-        public void MethodTest()
+        private readonly ILogger _logger;
+        public LayredArcDLC(ILogger<LayredArcDLC> logger)
         {
-          //  Console.WriteLine("yeah data acces layer is accessible");
+            _logger = logger;
+        }
+        public void MethodTest()          
+        {
+            _logger.LogInformation("method test started");
+         
+            Console.WriteLine("yeah data acces layer is accessible");
+
+            _logger.LogInformation("method test completed");
            
         }
     }
