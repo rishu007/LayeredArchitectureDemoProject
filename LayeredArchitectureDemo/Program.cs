@@ -28,7 +28,7 @@ namespace LayeredArchitectureDemo
           
             var test = serviceProvider.GetService<ILayredArcDemoBLC>();
             test.MethodOneBLC();
-            logger.LogInformation("app is done with its work test");
+            logger.LogInformation("app is done with its work testing");
             
             Console.ReadKey();
         }
