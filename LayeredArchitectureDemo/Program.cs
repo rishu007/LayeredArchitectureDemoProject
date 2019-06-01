@@ -17,7 +17,7 @@ namespace LayeredArchitectureDemo
     {
         static void Main(string[] args)
         {
-            //set up depency injection
+            // set up depency injection
 
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
